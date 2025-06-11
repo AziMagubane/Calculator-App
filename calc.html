@@ -75,17 +75,30 @@
                     finalTotal = value1 - value2;
                     break;
                 case "/":
+                    if(value2 == 0)
+                    {
+                        finalTotal = " undifined(numll)";
+                    }
+                    else
+                    {
                     finalTotal = value1 / value2;
+                    }   
                     break;
                 case "x":
                     finalTotal = value1 * value2;
                     break;                    
             }
+            if(finalTotal == 0)
+            {
+                document.getElementByid("inputBox").value ="Void";
+            }
+            else
+            {
             document.getElementById("inputBox").value = finalTotal;
 
             value1 = 0;
             newLine = true;       
-
+            }
         }
         </script>
     </body>
